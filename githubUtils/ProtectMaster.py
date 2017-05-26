@@ -35,25 +35,29 @@ def protect_branch(self, branch):
 
 
 parser = argparse.ArgumentParser(description='List all repos for an org')
+parser.add_argument('userName',help='your github username')
+parser.add_argument('accessToken',help='QAuth access token')
 parser.add_argument('orgName',help='github Organization name')
 parser.add_argument('repoName',help='The Target Repo Name - Example: ScottNewRepo')
 parser.add_argument('branchName',help='The Branch to Protect')
 args = parser.parse_args()
 
-# this will need to be cleaned up later perhaps input as arguments
+userName=args.userName
+accessToken=args.accessToken
+orgName=args.orgName
+repoName = args.repoName
+branchName = args.branchName
+
+#print "Input " + "*" + userName + "*" + accessToken + "*" + orgName + "*" + repoName + "*" + branchName
+
 try:
-    g = Github("sraignerSmarsh", "024b1b16c34dfa93da1e26c45e1465d9cb7f8ed0")
+    g = Github(userName,accessToken) 
 except GithubException as ghe:
     print "***Credentials Error"
     print(ghe)
     exit()
 
 the_user = g.get_user()
-
-orgName=args.orgName
-repoName = args.repoName
-branchName = args.branchName
-
 
 try:
     org = g.get_organization(orgName)
@@ -65,7 +69,6 @@ try:
     my_repo = org.get_repo(str(repoName))
 except GithubException as ghe:
     print(ghe)
-    print "Input " + "*" + orgName + "*" + repoName + "*" + branchName
     exit()
 
 try:
