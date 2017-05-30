@@ -37,6 +37,38 @@ optional arguments:
 ```
   python ProtectMaster.py  sraignerSmarsh 04XXXXXXXXXXXXXXXXXXXXX9049af15db3f82704 Smarsh ScottNewRepo  master
 ```
+##### Issues
+
+```
+{
+  "required_status_checks": {
+    "strict": true,
+    "contexts": [
+      "continuous-integration/travis-ci"
+    ]
+  },
+  "required_pull_request_reviews": { # in some situations this does not function 
+    "dismissal_restrictions": {
+      "users": [
+        "octocat"
+      ],
+      "teams": [
+        "justice-league"
+      ]
+    },
+    "dismiss_stale_reviews": true
+  },
+  "enforce_admins": true,
+  "restrictions": {   # in some situations this does not function 
+    "users": [
+      "octocat"
+    ],
+    "teams": [
+      "justice-league"
+    ]
+  }
+}
+```
 
 ### GetRepoList.py
 
@@ -67,7 +99,7 @@ optional arguments:
 
 ### CreateBlankRepo.py
 
-#### User
+#### Usage
 
 ```
 usage: CreateBlankRepo.py [-h] userName accessToken orgName repoName
@@ -88,3 +120,4 @@ optional arguments:
 ```
 python CreateBlankRepo.py sraignerSmarsh 046xxxxxxxxxxx9276xxxxxxxxxxxae12xxxxxxxxxxxx9axxxxxxxxxxx Smarsh ScottNewRepo2
 ```
+
