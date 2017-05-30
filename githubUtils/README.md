@@ -86,5 +86,5 @@ optional arguments:
 
 ##### Example:
 ```
-python CreateBlankRepo.py sraignerSmarsh 046aa49276ae120c45487169049af15db3f82704 Smarsh ScottNewRepo2
+python CreateBlankRepo.py sraignerSmarsh 046xxxxxxxxxxx9276xxxxxxxxxxxae12xxxxxxxxxxxx9axxxxxxxxxxx Smarsh ScottNewRepo2
 ```
