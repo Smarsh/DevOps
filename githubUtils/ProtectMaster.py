@@ -8,7 +8,7 @@ import argparse
 from github import Github
 from github import GithubException
 
-# Example from Documentation
+# Example from Documentation found online
 """
 {
   "required_status_checks": {
