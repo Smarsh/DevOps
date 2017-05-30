@@ -65,3 +65,26 @@ optional arguments:
   python ProtectMaster.py  sraignerSmarsh 04XXXXXXX7xxxxx0c45XXXXXXXXXX15db3f8XXXX4 Smarsh ScottNewRepo  master
 ```
 
+### CreateBlankRepo.py
+
+#### User
+
+```
+usage: CreateBlankRepo.py [-h] userName accessToken orgName repoName
+
+Get List of Repos
+
+positional arguments:
+  userName     your github username
+  accessToken  QAuth access token
+  orgName      github Organization name
+  repoName     The Target Repo Name - Example: ScottNewRepo
+
+optional arguments:
+  -h, --help   show this help message and exit
+```
+
+##### Example:
+```
+python CreateBlankRepo.py sraignerSmarsh 046aa49276ae120c45487169049af15db3f82704 Smarsh ScottNewRepo2
+```
