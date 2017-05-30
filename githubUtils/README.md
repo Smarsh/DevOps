@@ -6,7 +6,7 @@ This repository contains python scripts to make changes to Smarshes github repos
 
 ### Installation 
 
-- clone the repositorion git clone https://github.com/Smarsh/DevOps
+- clone the repository ->  git clone https://github.com/Smarsh/DevOps
 - install python version 2.7.X or higher 
 	- 'brew install python'
 - install pyGitHub 
@@ -20,6 +20,7 @@ usage: ProtectMaster.py [-h] userName accessToken orgName repoName branchName
 
 Protect the [Master|other] branch of a Repo
 
+```
 positional arguments:
   userName     your github username
   accessToken  QAuth access token
@@ -29,8 +30,9 @@ positional arguments:
 
 optional arguments:
   -h, --help   show this help message and exit
+```
 
-#####Example:
+##### Example:
 
 ```
   python ProtectMaster.py  sraignerSmarsh 04XXXXXXXXXXXXXXXXXXXXX9049af15db3f82704 Smarsh ScottNewRepo  master
@@ -40,6 +42,7 @@ optional arguments:
 
 #### Usage 
 
+```
 usage: GetRepoList.py [-h] userName accessToken orgName repoName branchName
 
 Get List of Repos
@@ -54,8 +57,9 @@ positional arguments:
 optional arguments:
   -h, --help   show this help message and exit
 
+```
 
-#####Example:
+##### Example:
 
 ```
   python ProtectMaster.py  sraignerSmarsh 04XXXXXXX7xxxxx0c45XXXXXXXXXX15db3f8XXXX4 Smarsh ScottNewRepo  master
