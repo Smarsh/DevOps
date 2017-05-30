@@ -8,6 +8,39 @@ import argparse
 from github import Github
 from github import GithubException
 
+# Example from Documentation
+"""
+{
+  "required_status_checks": {
+    "strict": true,
+    "contexts": [
+      "continuous-integration/travis-ci"
+    ]
+  },
+  "required_pull_request_reviews": {
+    "dismissal_restrictions": {
+      "users": [
+        "octocat"
+      ],
+      "teams": [
+        "justice-league"
+      ]
+    },
+    "dismiss_stale_reviews": true
+  },
+  "enforce_admins": true,
+  "restrictions": {
+    "users": [
+      "octocat"
+    ],
+    "teams": [
+      "justice-league"
+    ]
+  }
+}
+"""
+
+
 def protect_branch(self, branch):
     """
     :calls: `PATCH /repos/:owner/:repo/branches/:branch <https://developer.github.com/v3/repos/#enabling-and-disabling-branch-protection>`
@@ -33,8 +66,7 @@ def protect_branch(self, branch):
         headers={'Accept': 'application/vnd.github.loki-preview+json'}
     )
 
-
-parser = argparse.ArgumentParser(description='List all repos for an org')
+parser = argparse.ArgumentParser(description='Protect the Master branch of a Repo')
 parser.add_argument('userName',help='your github username')
 parser.add_argument('accessToken',help='QAuth access token')
 parser.add_argument('orgName',help='github Organization name')
