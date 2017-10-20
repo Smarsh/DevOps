@@ -1,7 +1,8 @@
 
 # DevOps
 
-This repo will be used to store DevOps utilities 
+This repo will be used to store DevOps utilities.  
+Please do not remove it -SR
 
 ### GitHubUtils
 
